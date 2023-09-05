@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import React from 'react';
 import { SafeAreaView, View, Text, Image, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 const parlaysData = [{
@@ -23,8 +24,8 @@ const ParlayItem = ({
     uri: 'https://tinyurl.com/42evm3m3'
   }} style={styles.image} />
     <View style={styles.info}>
-      <Text style={styles.sport}>{item.sport}</Text>
-      <Text style={styles.parlay}>{item.parlay}</Text>
+      <Pressable><Text style={styles.sport}>{item.sport}</Text></Pressable>
+      <Pressable><Text style={styles.parlay}>{item.parlay}</Text></Pressable>
     </View>
   </TouchableOpacity>;
 

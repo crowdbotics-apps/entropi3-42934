@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from 'react';
 import { SafeAreaView, View, Text, Image, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 
 const MatchScreen = () => {
+  const navigation = useNavigation();
   const [matches, setMatches] = useState([{
     id: '1',
     team1: 'Team A',
@@ -32,10 +34,14 @@ const MatchScreen = () => {
       <Text style={styles.title}>Parlay Matches</Text>
       <FlatList data={matches} renderItem={MatchItem} keyExtractor={item => item.id} />
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI11");
+      }}>
           <Text style={styles.buttonText}>Betting History</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI9");
+      }}>
           <Text style={styles.buttonText}>Bet</Text>
         </TouchableOpacity>
       </View>

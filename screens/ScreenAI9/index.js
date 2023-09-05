@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View, Image, Button } from 'react-native';
 
@@ -10,9 +11,11 @@ const BettingRulesScreen = ({
         <Button title="Close" onPress={() => navigation.goBack()} />
       </View>
       <View style={styles.content}>
-        <Image style={styles.image} source={{
-        uri: 'https://tinyurl.com/42evm3m3'
-      }} />
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI10");
+      }}><Image style={styles.image} source={{
+          uri: 'https://tinyurl.com/42evm3m3'
+        }} /></Pressable>
         <Text style={styles.text}>
           Rule 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Text>

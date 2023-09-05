@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import React from 'react';
 import { SafeAreaView, View, Text, Image, FlatList, Button, StyleSheet } from 'react-native';
 const bettors = [{
@@ -20,7 +21,7 @@ const BettorItem = ({
   }} />
     <View style={styles.textContainer}>
       <Text style={styles.name}>{name}</Text>
-      <Text style={styles.parlay}>{parlay}</Text>
+      <Pressable><Text style={styles.parlay}>{parlay}</Text></Pressable>
     </View>
     <Button title="Chat" onPress={() => {}} />
   </View>;
