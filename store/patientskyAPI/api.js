@@ -1,6 +1,6 @@
 import axios from "axios"
 const patientskyAPI = axios.create({
-  baseURL: "https://entropi3-42934.botics.co",
+  baseURL: "https://pirate-parlays-42934.botics.co",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_docs_schema_retrieve(payload) {
